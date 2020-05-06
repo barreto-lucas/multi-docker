@@ -22,4 +22,3 @@ after_success:
   - docker push lucasbarreto/multi-nginx
   - docker push lucasbarreto/multi-server
   - docker push lucasbarreto/multi-worker
-  
