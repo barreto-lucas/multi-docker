@@ -15,7 +15,8 @@ after_success:
   - docker build -t lucasbarreto/multi-server ./server
   - docker build -t lucasbarreto/multi-worker ./worker
 # Log in to the docker hub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD docker.io
 
 # Take those images and push them to docker hub
   - docker push lucasbarreto/multi-client
