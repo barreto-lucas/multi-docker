@@ -24,8 +24,9 @@ after_success:
   - docker push lucascb144/multi-worker
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
-  region: sa-east-'
+  region: sa-east-1
   app: multi-docker
   env: MultiDocker-env
   bucket_name: elasticbeanstalk-sa-east-1-376480195867
